@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const words = ["Shoulder Sweater", "Socks and Sandals", "Hair Fade", "Chucks", "Jute Beutel", "Polo Shirt", "Crocs", "un-ironic Fanny-Pack", "3/4 length Pants", "avocado Toast", "T-shirt with the word Denim", "Selfie Poses", "Aperol Spritz", "Perm", "Festival Bracelets", "Obelix Pants", "Mono-coloured Sweatsuit", "over-ear toque ", "waxed moustache", "Tucked T-Shirt", "Rolled up Pants", "Bare Foot", "Fjallraven Bag", "Vintage Tshirt", "Got Bag"];
+    const words = ["ShoulderSweater", "Socks+Sandals", "HairFade", "Chucks", "JuteBeutel", "PoloShirt", "Crocs", "unironicFannyPack", "3-4lengthPants", "avocadoToast", "T-shirt Denim", "Selfie Poses", "Aperol Spritz", "Perm", "Festival Bracelets", "Obelix Pants", "Mono-colourSweatsuit", "over-ear toque ", "waxed moustache", "Tucked T-Shirt", "Rolled up Pants", "Bare Foot", "Fjallraven Bag", "Vintage Tshirt", "Got Bag"];
     const bingoCard = document.getElementById("bingo-card");
     const regenerateButton = document.getElementById("regenerate-card");
 
