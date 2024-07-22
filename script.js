@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const bingoCard = document.getElementById("bingo-card");
     const regenerateButton = document.getElementById("regenerate-card");
 
+    let completedLines = new Set();
+
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function generateBingoCard() {
         bingoCard.innerHTML = "";
+        completedLines.clear();
         const shuffledWords = shuffle([...words]);
         for (let i = 0; i < 25; i++) {
             const cell = document.createElement("div");
@@ -59,11 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
             [4, 8, 12, 16, 20],
         ];
 
-        for (const line of winningLines) {
-            if (isBingo(line)) {
-                alert("Hipster Bingo!");
+        let newLineCompleted = false;
+        
+        for (const [index, line] of winningLines.entries()) {
+            if (isBingo(line) && !completedLines.has(index)) {
+                completedLines.add(index);
+                newLineCompleted = true;
                 break;
             }
+        }
+
+        if (newLineCompleted) {
+            alert("Hipster Bingo!");
         }
 
         if (cells.every(cell => cell.classList.contains("selected"))) {
@@ -79,3 +89,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     generateBingoCard();
 });
+
