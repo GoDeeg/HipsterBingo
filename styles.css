@@ -10,13 +10,15 @@ body {
 
 h1 {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .bingo-card {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(5, 100px);
     gap: 5px;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
 }
 
 .cell {
@@ -26,6 +28,12 @@ h1 {
     background-color: #fff;
     border: 1px solid #ccc;
     cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: calc(10px + 1vw); /* Dynamic font size based on viewport width */
 }
 
 .cell.selected {
@@ -38,4 +46,22 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+/* Responsive design */
+@media (min-width: 600px) {
+    .bingo-card {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 599px) {
+    .bingo-card {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .cell {
+        font-size: calc(8px + 1vw); /* Smaller dynamic font size for smaller screens */
+    }
 }
