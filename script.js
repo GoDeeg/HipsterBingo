@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const words = ["Artisan", "Beard", "Organic", "Vinyl", "Kale", "Lumberjack", "Kombucha", "Plaid", "Vegan", "Quinoa", "Craft", "Bicycle", "Gluten-Free", "Fixie", "Espresso", "Farm-to-Table", "Locally-Sourced", "Cold Brew", "DIY", "Sustainable", "Minimalist", "Aesthetic", "Hammock", "Vintage", "Chia"];
+    const words = ["Socks+Sandals", "Beard", "Waxed 'Stache", "Obelix Pants", "Crocs", "Vintage Tshirt", "3/4 Pants", "Plaid", "Vegan", "Quinoa", "Craft", "Bicycle", "Gluten-Free", "Fixie", "Espresso", "Farm-to-Table", "Locally-Sourced", "Cold Brew", "DIY", "Sustainable", "Minimalist", "Aesthetic", "Hammock", "Vintage", "Chia"];
     const bingoCard = document.getElementById("bingo-card");
     const regenerateButton = document.getElementById("regenerate-card");
 
