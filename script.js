@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const words = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18 ", "19", "20", "21", "22", "23", "24", "25"];
+    const words = ["Artisan", "Beard", "Organic", "Vinyl", "Kale", "Lumberjack", "Kombucha", "Plaid", "Vegan", "Quinoa", "Craft", "Bicycle", "Gluten-Free", "Fixie", "Espresso", "Farm-to-Table", "Locally-Sourced", "Cold Brew", "DIY", "Sustainable", "Minimalist", "Aesthetic", "Hammock", "Vintage", "Chia"];
     const bingoCard = document.getElementById("bingo-card");
     const regenerateButton = document.getElementById("regenerate-card");
 
@@ -89,4 +89,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     generateBingoCard();
 });
-
