@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const words = ["Socks-Sandals", "Beard", "Waxed-Stache", "ObelixPants", "Crocs", "Vintage-Tshirt", "80%Pants", "Flood-Pants", " Avocado", "Got Bag", "Fjallraven", "Hair:Fade", "Hair:Perm", "Barefoot", "Corduroy", "FannyPack", "Shoulder-Sweater", "Selfie", "Aperol Spritz", "Got Bag", "JuteBeutel", "Denim Tshirt", "tucked t-Shirt", "Onesie", "Birks"];
+    const words = [
+        "Socks-Sandals", "Beard", "Waxed-Stache", "ObelixPants", "Crocs", "Vintage-Tshirt", "80%-Pants", "Flood-Pants",
+        "Avocado", "Got Bag", "Fjallraven", "Hair:Fade", "Hair:Perm", "Barefoot", "barefoot-Shoes" "Corduroy", "FannyPack", "Shoulder-Sweater",
+        "Selfie", "Aperol Spritz", "Got Bag", "JuteBeutel", "Denim Tshirt", "Tucked T-Shirt", "Onesie", "Birks",
+        "Vinyl Record", "Typewriter", "Craft Beer", "Polaroid Camera", "Fixed Gear Bike", "Suspenders", "Bowtie",
+        "Thrift Store Find", "Mason Jar", "Artisan Coffee", "Minimalist Watch", "Wayfarer Sunglasses", "Handmade Jewelry",
+        "Messenger Bag", "Retro Glasses", "Plaid Shirt", "Skinny Jeans", "Man Bun", "Bike Messenger", "Gourmet Popcorn",
+        "Tattoo Sleeve", "Eco-friendly Bag", "Vegan Snacks", "Analog Watch", "Artisan Soap", "Reusable Straw"
+    ];
+
     const bingoCard = document.getElementById("bingo-card");
     const regenerateButton = document.getElementById("regenerate-card");
 
@@ -20,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < 25; i++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
-            if (i === 12) {
+            if (i === 12) { // Center cell as a free space
                 cell.textContent = "Hipster Bingo";
                 cell.classList.add("free");
             } else {
